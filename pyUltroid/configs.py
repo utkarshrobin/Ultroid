@@ -31,10 +31,10 @@ class Var:
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
-        else (config("REDIS_URI", default=None) or config("REDIS_URL", default=None))
+        else (config("REDIS_URI", "redis-14811.c90.us-east-1-3.ec2.cloud.redislabs.com:14811") or config("REDIS_URL", "redis-14811.c90.us-east-1-3.ec2.cloud.redislabs.com:14811"))
     )
     REDIS_PASSWORD = (
-        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default=None)
+        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", "8vrKS6bPbWSTcEUyb1YfahwPt0IXBt8y")
     )
     # extras
     BOT_TOKEN = config("BOT_TOKEN", default=None)
